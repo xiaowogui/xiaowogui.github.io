@@ -5,6 +5,39 @@
     
     <entry>
       <title>JAVA数据结构与算法基础学习笔记(二)</title>
+      <link href="/2020/040247427.html"/>
+      <url>/2020/040247427.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="时间复杂度和空间复杂度概述"><a href="#时间复杂度和空间复杂度概述" class="headerlink" title="时间复杂度和空间复杂度概述"></a>时间复杂度和空间复杂度概述</h2><h2 id="八种常用排序算法"><a href="#八种常用排序算法" class="headerlink" title="八种常用排序算法"></a>八种常用排序算法</h2><h3 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h3><ol><li><strong>冒泡排序</strong><pre><code>package demo4;</code></pre></li></ol><p>import java.util.Arrays;</p><p>public class BubbleSort{<br>    public static void main(String[] args){<br>        int[] arr = new int[] {5,7,2,9,4,1,0,5,7};</p><pre><code>    bubbleSort(arr);    System.out.println(Arrays.toString(arr));}public static void bubbleSort(int[] arr){    //控制一共比较多少轮    for(int i=0;i&lt;arr.length-1;i++){        //每轮比较多少次        for(int j=0;j&lt;arr.length-1-i;j++){            if(arr[j]&gt;arr[j+1]){                int temp = arr[j];                arr[j] = arr[j+1];                arr[j+1] = temp;            }        }    }}</code></pre><p>}</p><p>```</p><ol start="2"><li><strong>快速排序</strong><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3></li><li><strong>直接插入排序</strong></li><li><strong>希尔排序</strong><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3></li><li><strong>简单选择排序</strong></li><li><strong>堆排序</strong><h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><h2 id="八种排序方法的对比"><a href="#八种排序方法的对比" class="headerlink" title="八种排序方法的对比"></a>八种排序方法的对比</h2></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> JAVA </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> 排序算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JAVA数据结构与算法基础学习笔记(二)</title>
       <link href="/2020/040147427.html"/>
       <url>/2020/040147427.html</url>
       
