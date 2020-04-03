@@ -6,12 +6,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="JAVA数据结构与算法基础学习笔记(三), HTML,CSS,JavaScript,React,React Native,java,Spring Boot等">
-    <meta name="description" content="排序算法时间复杂度和空间复杂度概述八种常用排序算法交换排序
-冒泡排序package demo4;
+    <meta name="description" content="排序算法时间复杂度和空间复杂度概述时间复杂度：空间复杂度：八种常用排序算法交换排序
+冒泡排序
 
+package demo4;
 
 import java.util.Arrays;
-public class BubbleSort{    public static vo">
+
+public class BubbleSort{
+    p">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -480,14 +483,14 @@ public class BubbleSort{    public static vo">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 				
@@ -503,191 +506,293 @@ public class BubbleSort{    public static vo">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="时间复杂度和空间复杂度概述"><a href="#时间复杂度和空间复杂度概述" class="headerlink" title="时间复杂度和空间复杂度概述"></a>时间复杂度和空间复杂度概述</h2><h2 id="八种常用排序算法"><a href="#八种常用排序算法" class="headerlink" title="八种常用排序算法"></a>八种常用排序算法</h2><h3 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h3><ol>
-<li><strong>冒泡排序</strong><pre><code>package demo4;
-</code></pre></li>
+                <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="时间复杂度和空间复杂度概述"><a href="#时间复杂度和空间复杂度概述" class="headerlink" title="时间复杂度和空间复杂度概述"></a>时间复杂度和空间复杂度概述</h2><h3 id="时间复杂度："><a href="#时间复杂度：" class="headerlink" title="时间复杂度："></a>时间复杂度：</h3><h3 id="空间复杂度："><a href="#空间复杂度：" class="headerlink" title="空间复杂度："></a>空间复杂度：</h3><h2 id="八种常用排序算法"><a href="#八种常用排序算法" class="headerlink" title="八种常用排序算法"></a>八种常用排序算法</h2><h3 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h3><ol>
+<li><strong>冒泡排序</strong></li>
 </ol>
-<p>import java.util.Arrays;</p>
-<p>public class BubbleSort{<br>    public static void main(String[] args){<br>        int[] arr = new int[] {5,7,2,9,4,1,0,5,7};</p>
-<pre><code>    bubbleSort(arr);
-    System.out.println(Arrays.toString(arr));
+<pre><code>package demo4;
 
-}
+import java.util.Arrays;
 
-public static void bubbleSort(int[] arr){
-    //控制一共比较多少轮
-    for(int i=0;i&lt;arr.length-1;i++){
-        //每轮比较多少次
-        for(int j=0;j&lt;arr.length-1-i;j++){
-            if(arr[j]&gt;arr[j+1]){
-                int temp = arr[j];
-                arr[j] = arr[j+1];
+public class BubbleSort{
+    public static void main(String[] args){
+        int[] arr = new int[] {5,7,2,9,4,1,0,5,7};
+
+        bubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    public static void bubbleSort(int[] arr){
+        //控制一共比较多少轮
+        for(int i=0;i&lt;arr.length-1;i++){
+            //每轮比较多少次
+            for(int j=0;j&lt;arr.length-1-i;j++){
+                if(arr[j]&gt;arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+}</code></pre><ol>
+<li><strong>快速排序</strong></li>
+</ol>
+<pre><code>package demo4;
+import  java.util.Arrays;
+public class QuickSort{
+    public static void main(String[] args){
+        int[] arr = new int[] {3,18,9,8,5,4,7,6};
+        quickSort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void quickSort(int[] arr,int start,int end){
+        if(start&lt;end&gt;){
+            //把数组中的第0个数字作为标准数
+            int stard = arr[start];
+            //记录需要排序的下标
+            int low = start;
+            int high = end;
+            //循环找比标准数大的数和比标准数小的数
+            while(low&lt;high){
+                //右边的数字比标准数大
+                while(low&lt;high&amp;&amp;stard&lt;=arr[high]){
+                    high--;
+                }
+                //使用右边的数字替换左边的数
+                arr[low] = arr[high];
+                //如果左边的数字比标准数小
+                while(low&lt;high&amp;&amp;arr[low]&lt;=stard){
+                    low++;
+                }
+                arr[high] = arr[low];
+            }
+            //把标准数赋给低所在的位置的元素
+            arr[low] = stard;
+            //处理所有小的数字，调用递归
+            quickSort(arr,start,low);
+            //处理所有大的数字
+            quickSort(arr,low+1,end);
+        }
+    }
+}</code></pre><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ol>
+<li><strong>直接插入排序</strong></li>
+</ol>
+<pre><code>package demo4;
+
+import java.util.Arrays;
+
+public class insertSort{
+    public static void main(String[] args){
+        int[] arr = new int[] {5,7,2,9,4,1,0,5,7};
+
+        insertSort(arr);
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    public static void insertSort(int[] arr){
+        //遍历所有的数字
+        for(int i=1;i&lt;arr.length;i++){
+            //如果当当前数字比前一个数字小
+            if(arr[i]&lt;arr[i-1]){
+                //把当前遍历数字存起来
+                int temp = arr[i];
+                int j;
+                //遍历当前数字前面所有的数字
+                for(j=i&lt;-1;j&gt;=0&amp;&amp;temp&lt;arr[j];j--){
+                    //把前一个数字赋给后一个数字
+                    arr[j+1] = arr[j];
+                }
+                //把临时变量(外层for循环的当前元素)赋给不满足条件的后一个元素
                 arr[j+1] = temp;
             }
         }
     }
-}</code></pre><p>}</p>
-<pre><code>
-2. **快速排序**
-</code></pre><p>package demo4;<br>import  java.util.Arrays;<br>public class QuickSort{<br>    public static void main(String[] args){<br>        int[] arr = new int[] {3,18,9,8,5,4,7,6};<br>        quickSort(arr,0,arr.length-1);<br>        System.out.println(Arrays.toString(arr));<br>    }</p>
-<pre><code>public static void quickSort(int[] arr,int start,int end){
-    if(start&lt;end&gt;){
-        //把数组中的第0个数字作为标准数
-        int stard = arr[start];
-        //记录需要排序的下标
-        int low = start;
-        int high = end;
-        //循环找比标准数大的数和比标准数小的数
-        while(low&lt;high){
-            //右边的数字比标准数大
-            while(low&lt;high&amp;&amp;stard&lt;=arr[high]){
-                high--;
-            }
-            //使用右边的数字替换左边的数
-            arr[low] = arr[high];
-            //如果左边的数字比标准数小
-            while(low&lt;high&amp;&amp;arr[low]&lt;=stard){
-                low++;
-            }
-            arr[high] = arr[low];
-        }
-        //把标准数赋给低所在的位置的元素
-        arr[low] = stard;
-        //处理所有小的数字，调用递归
-        quickSort(arr,start,low);
-        //处理所有大的数字
-        quickSort(arr,low+1,end);
+}</code></pre><ol>
+<li><strong>希尔排序</strong></li>
+</ol>
+<pre><code>package demo4;
+import java.util.Arrays;
+public class ShellSort{
+    public static void main(String[] args){
+        int[] arr = new int[] {3,5,2,7,8,1,2,0,4,7,4,3,8};
+        shellSort(arr);
+        System.out.println(Arrays.toString(arr));
     }
-}</code></pre><p>}</p>
-<pre><code>
-### 插入排序
-1. **直接插入排序**</code></pre><p>package demo4;</p>
-<p>import java.util.Arrays;</p>
-<p>public class insertSort{<br>    public static void main(String[] args){<br>        int[] arr = new int[] {5,7,2,9,4,1,0,5,7};</p>
-<pre><code>    insertSort(arr);
-    System.out.println(Arrays.toString(arr));
 
-}
-
-public static void insertSort(int[] arr){
-    //遍历所有的数字
-    for(int i=1;i&lt;arr.length;i++){
-        //如果当当前数字比前一个数字小
-        if(arr[i]&lt;arr[i-1]){
-            //把当前遍历数字存起来
-            int temp = arr[i];
-            int j;
-            //遍历当前数字前面所有的数字
-            for(j=i&lt;-1;j&gt;=0&amp;&amp;temp&lt;arr[j];j--){
-                //把前一个数字赋给后一个数字
-                arr[j+1] = arr[j];
-            }
-            //把临时变量(外层for循环的当前元素)赋给不满足条件的后一个元素
-            arr[j+1] = temp;
-        }
-    }
-}</code></pre><p>}</p>
-<pre><code>
-2. **希尔排序**
-</code></pre><p>package demo4;<br>import java.util.Arrays;<br>public class ShellSort{<br>    public static void main(String[] args){<br>        int[] arr = new int[] {3,5,2,7,8,1,2,0,4,7,4,3,8};<br>        shellSort(arr);<br>        System.out.println(Arrays.toString(arr));<br>    }</p>
-<pre><code>public static void shellSort(int[] arr){
-    //遍历所有的步长
-    for(int d = arr.length/2;d&gt;0;d/=2){
-        遍历所有的元素
-        for(int i = d;i&lt;arr.length;i++){
-            //遍历本组中所有的元素
-            for(int j=i-d;j&gt;=0;j-=d){
-                //如果当前元素大于加上步长后的那个元素
-                if(arr[j]&gt;arr[j+d]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+d];
-                    arr[j+d] = temp;
+    public static void shellSort(int[] arr){
+        //遍历所有的步长
+        for(int d = arr.length/2;d&gt;0;d/=2){
+            遍历所有的元素
+            for(int i = d;i&lt;arr.length;i++){
+                //遍历本组中所有的元素
+                for(int j=i-d;j&gt;=0;j-=d){
+                    //如果当前元素大于加上步长后的那个元素
+                    if(arr[j]&gt;arr[j+d]){
+                        int temp = arr[j];
+                        arr[j] = arr[j+d];
+                        arr[j+d] = temp;
+                    }
                 }
             }
         }
     }
-}</code></pre><p>}</p>
-<pre><code>
-### 选择排序
-1. **简单选择排序**
-</code></pre><p>package demo4;<br>import java.util.Arrays;<br>public class SelectSort{<br>    public static void main(){<br>        int[] arr = new int[] {3,5,2,9,4,7,6,1};<br>        selectSort(arr);<br>        System.out.println(Arrays.toString(arr));<br>    }</p>
-<pre><code>    //选择排序
-    public static void selectSort(int[] arr){
-        //遍历所有的数
-        for(int i=0;i&lt;arr.length;i++){
-            int minIndex = i;
-            //把当前遍历的数和后面所有的数依次进行比较，并记录下最小的数的下标
-            for(int j=i+1;j&lt;arr.length;j++){
-                //如果后面比较的数比记录的最小的数小
-                if(arr[minIndex]&gt;arr[j]){
-                    //记录下最小的那个数的下标
-                    minIndex = j;
+}</code></pre><h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><ol>
+<li><strong>简单选择排序</strong></li>
+</ol>
+<pre><code>package demo4;
+import java.util.Arrays;
+public class SelectSort{
+    public static void main(){
+        int[] arr = new int[] {3,5,2,9,4,7,6,1};
+        selectSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+        //选择排序
+        public static void selectSort(int[] arr){
+            //遍历所有的数
+            for(int i=0;i&lt;arr.length;i++){
+                int minIndex = i;
+                //把当前遍历的数和后面所有的数依次进行比较，并记录下最小的数的下标
+                for(int j=i+1;j&lt;arr.length;j++){
+                    //如果后面比较的数比记录的最小的数小
+                    if(arr[minIndex]&gt;arr[j]){
+                        //记录下最小的那个数的下标
+                        minIndex = j;
+                    }
+                }
+                //如果最小的数和当前遍历数的下标不一致，说明下标为Index的数比当前遍历的数更小
+                if(i!=minIndex){
+                    int temp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = temp;
                 }
             }
-            //如果最小的数和当前遍历数的下标不一致，说明下标为Index的数比当前遍历的数更小
-            if(i!=minIndex){
-                int temp = arr[i];
-                arr[i] = arr[minIndex];
-                arr[minIndex] = temp;
-            }
+        }
+    }</code></pre><ol start="2">
+<li><strong>堆排序</strong></li>
+</ol>
+<pre><code>
+
+
+
+
+</code></pre><h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><pre><code>package demo4;
+import java.util.Arrays;
+public class MergerSort(){
+    public static void main(String[] args){
+        int[] arr= new int[] {1,3,5,2,4,6,8,10};
+        mergeSort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void mergeSort(int[] arr;int low;int high){
+        int middle=(high+low)/2;
+        if(low&lt;high){
+            //处理左边
+        mergeSort(arr,low,middle);
+        //处理右边
+        mergeSort(arr,middle+1,high);
+        //归并
+        mergeSort(arr,low,middle,high);
         }
     }
-}</code></pre><pre><code>
-2. **堆排序**
-</code></pre><p>package demo4;<br>import java.util.Arrays;<br>public class MergerSort(){<br>    public static void main(String[] args){<br>        int[] arr= new int[] {1,3,5,2,4,6,8,10};<br>        mergeSort(arr,0,arr.length-1);<br>        System.out.println(Arrays.toString(arr));<br>    }</p>
-<pre><code>public static void mergeSort(int[] arr;int low;int high){
-    int middle=(high+low)/2;
-    if(low&lt;high){
-        //处理左边
-    mergeSort(arr,low,middle);
-    //处理右边
-    mergeSort(arr,middle+1,high);
-    //归并
-    mergeSort(arr,low,middle,high);
-    }
-}
 
-public static void merge(int[] arr,int low,int middle,int high){
-    //用于存储归并后的临时数组
-    int[] temp = new int[high-low+1];
-    //记录第一个数组中需要遍历的下标
-    int i = low;
-    //记录第二个数组需要遍历的下标
-    int j = middle+1;
-    //用于记录在临时数组中存放的下标
-    int index = 0;
-    //遍历两个数组取出小的数字，放入临时数组中
-    while(i&lt;=middle&amp;&amp;j&lt;=high){
-        //第一个数组是数据更小
-        if(arr[i]&lt;=arr[j]){
-            //把小的数据放入临时数组中
-            temp[index] = arr[i];
-            //让下标向后移一位
-            i++;
-        }else{
+    public static void merge(int[] arr,int low,int middle,int high){
+        //用于存储归并后的临时数组
+        int[] temp = new int[high-low+1];
+        //记录第一个数组中需要遍历的下标
+        int i = low;
+        //记录第二个数组需要遍历的下标
+        int j = middle+1;
+        //用于记录在临时数组中存放的下标
+        int index = 0;
+        //遍历两个数组取出小的数字，放入临时数组中
+        while(i&lt;=middle&amp;&amp;j&lt;=high){
+            //第一个数组是数据更小
+            if(arr[i]&lt;=arr[j]){
+                //把小的数据放入临时数组中
+                temp[index] = arr[i];
+                //让下标向后移一位
+                i++;
+            }else{
+                temp[index] = arr[j];
+                j++;
+            }
+            index++;
+        }
+        //处理多余的数据
+        while(j&lt;=high){
             temp[index] = arr[j];
             j++;
+            index++;
         }
-        index++;
+        while(i&lt;=middle){
+            temp[index] = arr[i];
+            i++;
+            index++;
+        }
+        //把临时数组中的数据重新存入原数组
+        for(int k=0;k&lt;temp.length;k++){
+            arr[k+low] = temp[k];
+        }
     }
-    //处理多余的数据
-    while(j&lt;=high){
-        temp[index] = arr[j];
-        j++;
-        index++;
+}</code></pre><h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><pre><code>package demo4;
+import java.util.Arrays;
+public class RadixSort{
+    public static void main(){
+        int[] arr = new in[] {23,6,189,45,9,287,56,1,798,34,65,652,5};
+        radixSort(arr);
+        System.out.println(Arrays.toString(arr));
     }
-    while(i&lt;=middle){
-        temp[index] = arr[i];
-        i++;
-        index++;
+
+    public static void radixSort(int[] arr){
+        int max=Integer.MIN_VALUE;
+        for(int i = 0;i&lt;arr.length;i++&gt;){
+            if(arr[i]&gt;max){
+                max=arr[i];
+            }
+        }
+        //计算最大数字是几位数
+        int maxLength = (max+&quot;&quot;).length();
+        //用于临时存储数据的数组
+        int[][] temp = new int[10][arr.length];
+        //用于记录在temp中年相应的数组中存放的数字的数量
+        int[] counts = new int[10];
+        //根据最大长度的数决定比较的次数
+        for(int i = 0,n = 1;i&lt;maxLength;i++,n *= 10){
+            //把每一个数字分别计算余数
+            for(int j=0;j&lt;arr.length;j++){
+                //计算余数
+                int ys = arr[j]/n%10;
+                //把当前遍历的数据放入指定的数组中
+                temp[ys][counts[ys]] = arr[j];
+                //记录数量
+                counts[ys]++;
+            }
+            //记录取的元素需要放的位置
+            int index = 0;
+            //把数字取出来
+            for(int k=0;k&lt;counts.length;k++){
+                //记录数量的数组中当前余数记录的数量不为0
+                if(counts[k]!=0){
+                    //循环取出元素
+                    for(int l=0;l&lt;counts[k];l++){
+                        //取出元素
+                        arr[index] = temp[k][l];
+                        //记录下一个位置
+                        index++;
+                    }
+                    //把数量置为0
+                    counts[k]=0;
+                }
+            }
+        }
     }
-    //把临时数组中的数据重新存入原数组
-    for(int k=0;k&lt;temp.length;k++){
-        arr[k+low] = temp[k];
-    }
-}</code></pre><p>}</p>
-<p>```</p>
-<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><h2 id="八种排序方法的对比"><a href="#八种排序方法的对比" class="headerlink" title="八种排序方法的对比"></a>八种排序方法的对比</h2>
+}</code></pre><h2 id="八种排序方法的对比"><a href="#八种排序方法的对比" class="headerlink" title="八种排序方法的对比"></a>八种排序方法的对比</h2>
             </div>
             <hr/>
 
@@ -1209,12 +1314,15 @@ public static void merge(int[] arr,int low,int middle,int high){
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            排序算法时间复杂度和空间复杂度概述八种常用排序算法交换排序
-冒泡排序package demo4;
+                            排序算法时间复杂度和空间复杂度概述时间复杂度：空间复杂度：八种常用排序算法交换排序
+冒泡排序
 
+package demo4;
 
 import java.util.Arrays;
-public class BubbleSort{    public static vo
+
+public class BubbleSort{
+    p
                         
                     </div>
                     <div class="publish-info">
@@ -1470,7 +1578,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.2k</span>&nbsp;字
+                class="white-color">5.5k</span>&nbsp;字
             
             
             
