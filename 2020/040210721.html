@@ -433,20 +433,20 @@ public class BubbleSort{
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JAVA/">
-                                <span class="chip bg-color">JAVA</span>
-                            </a>
-                        
                             <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                                 <span class="chip bg-color">数据结构</span>
                             </a>
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">学习笔记</span>
-                            </a>
-                        
                             <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
                                 <span class="chip bg-color">排序算法</span>
+                            </a>
+                        
+                            <a href="/tags/JAVA/">
+                                <span class="chip bg-color">JAVA</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">学习笔记</span>
                             </a>
                         
                     </div>
@@ -487,14 +487,14 @@ public class BubbleSort{
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 				
@@ -679,7 +679,48 @@ public class SelectSort{
     }</code></pre><ol start="2">
 <li><strong>堆排序</strong></li>
 </ol>
-<pre><code>
+<pre><code>package dome4;
+
+public class HeapSort{
+    public static void main(Stringp[ args]){
+        int[] arr = new int[] {9,6,8,7,0,1,10,4,2};
+        //开始位置是最后一个非叶子节点，即最后一个节点的父节点
+        int start = (arr.length-1)/2;
+        //调整为大顶堆
+        for(int i=start;i&gt;=0;i--){
+            maxHeap(arr,arr.length,i);
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void heapSort(int[] arr){
+
+    }
+
+    public static void maxHeap(int[] arr,int size,int index){
+        //左子节点
+        int leftNode = 2*index+1;
+        //右子节点
+        int rightNode  =2*index+2;
+        int max = index;
+        //和两个子节点分别对比，找出最大的节点
+        if(leftNode&lt;size&amp;&amp;arr[leftNode]&gt;arr[max]){
+            max = leftNode;
+        }
+        if(rightNode&lt;size&amp;&amp;arr[rightNode]&gt;arr[max]){
+            max = rightNode;
+        }
+        //交换位置
+        if(max!=index){
+            int temp = arr[index];
+            arr[index] = arr[max];
+            arr[max] = temp;
+            //交换位置以后，可能会破坏之前排好的堆，所以，之前排好的堆需要重新调整
+            maxHeap(arr,size,max);
+        }
+    }
+}
+
 
 
 
@@ -859,20 +900,20 @@ public class RadixSort{
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JAVA/">
-                                    <span class="chip bg-color">JAVA</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                                     <span class="chip bg-color">数据结构</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">学习笔记</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
                                     <span class="chip bg-color">排序算法</span>
+                                </a>
+                            
+                                <a href="/tags/JAVA/">
+                                    <span class="chip bg-color">JAVA</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">学习笔记</span>
                                 </a>
                             
                         </div>
@@ -1349,12 +1390,12 @@ public class RadixSort{
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JAVA/">
-                        <span class="chip bg-color">JAVA</span>
-                    </a>
-                    
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                         <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/JAVA/">
+                        <span class="chip bg-color">JAVA</span>
                     </a>
                     
                     <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -1419,20 +1460,20 @@ public class RadixSort{
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JAVA/">
-                        <span class="chip bg-color">JAVA</span>
-                    </a>
-                    
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                         <span class="chip bg-color">数据结构</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/JAVA/">
+                        <span class="chip bg-color">JAVA</span>
                     </a>
                     
                     <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">学习笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
@@ -1582,7 +1623,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.4k</span>&nbsp;字
+                class="white-color">6.7k</span>&nbsp;字
             
             
             
@@ -1727,6 +1768,17 @@ $(function () {
     <script src="/js/matery.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
 
 
     <!-- Baidu Analytics -->
