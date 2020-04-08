@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>JAVA笔试面试-字符串</title>
+      <link href="/java-bi-shi-mian-shi-zi-fu-chuan-48943.html"/>
+      <url>/java-bi-shi-mian-shi-zi-fu-chuan-48943.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="字符串介绍："><a href="#字符串介绍：" class="headerlink" title="字符串介绍："></a>字符串介绍：</h1><p>  字符串是程序开发当中，使用最频繁的类型之一，有着与基础类型相同的地位，甚至在 JVM（Java 虚拟机）编译的时候会对字符串做特殊的处理，比如拼加操作可能会被 JVM 直接合成为一个最终的字符串，从而到达高效运行的目的。</p><h2 id="1-、String-特性"><a href="#1-、String-特性" class="headerlink" title="1 、String 特性"></a>1 、String 特性</h2><p>String是标准的不可变类（immutable），对它的任何改动，其实就是创建了一个新对象，再把引用指向该对象；<br>Sting对象赋值之后就会在常量池中缓存，如果下次创建会判定常量池是否已经有缓存对象，如果有的话直接返回该引用给创建者。</p><h2 id="2-、字符串创建"><a href="#2-、字符串创建" class="headerlink" title="2 、字符串创建"></a>2 、字符串创建</h2><p>  两种方式：</p><pre><code>//字符串的创建形式String str1 = &quot;dabing&quot;;String str2 = new String(&quot;dabing&quot;);</code></pre><h2 id="3、字符串拼接"><a href="#3、字符串拼接" class="headerlink" title="3、字符串拼接"></a>3、字符串拼接</h2><pre><code>//字符串的拼接String str3 = &quot;da&quot;+&quot;bing&quot;;String str4 = &quot;da&quot;;str4  += &quot;bing&quot;;String str4 = &quot;da&quot;; String str6 = str + &quot;wang&quot;;</code></pre><h2 id="4、-字符串截取"><a href="#4、-字符串截取" class="headerlink" title="4、 字符串截取"></a>4、 字符串截取</h2><p>  字符串的截取使用 substring() 方法，使用如下：</p><pre><code>//字符串的两种截取方式String str5 = &quot;abcdefg&quot;;//从下标为3的开始截取，包含开始下标，输出cdefgSystem.out.println(str5.substring(3));//从下标为2开始截取下标为4的，包含开始下标不包含结束下标，输出cdSystem.out.println(str5.substring(2, 4));</code></pre><h2 id="5-、字符对比及”-”-和-equals-的区别是什么？"><a href="#5-、字符对比及”-”-和-equals-的区别是什么？" class="headerlink" title="5 、字符对比及”==” 和 equals 的区别是什么？"></a>5 、字符对比及”==” 和 equals 的区别是什么？</h2><p>  “==” 对基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重写了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。<br>示例代码：</p><pre><code>String x = &quot;string&quot;;String y = &quot;string&quot;;String z = new String(&quot;string&quot;);System.out.println(x==y); // trueSystem.out.println(x==z); // falseSystem.out.println(x.equals(y)); // trueSystem.out.println(x.equals(z)); // true</code></pre><p>解析：因为 x 和 y 指向的是同一个引用，所以 “==” 也是 true，而 new String() 方法则重写开辟了内存空间，所以 == 结果为 false，而 equals 比较的一直是值，所以结果都为 true。</p><pre><code>String s1 = &quot;hi,&quot; + &quot;da&quot; + &quot;bing&quot;;String s2 = &quot;hi,&quot;;s2 += &quot;da&quot;;s2 += &quot;bing&quot;;String s3 = &quot;hi,dabing&quot;;System.out.println(s1.equals(s2)); // trueSystem.out.println(s1.equals(s3)); // trueSystem.out.println(s2.equals(s3)); // true</code></pre><h2 id="6-、String、StringBuffer、StringBuild"><a href="#6-、String、StringBuffer、StringBuild" class="headerlink" title="6 、String、StringBuffer、StringBuild"></a>6 、String、StringBuffer、StringBuild</h2><p>  StringBuffer、StringBuild 都是可以变的字符串类型，StringBuild 和 String 相似都是非线程安全的，所以多线程下推荐使用 StringBuffer。<br>  StringBuffer 使用：</p><pre><code>StringBuffer sb = new StringBuffer(&quot;da&quot;);// 添加字符串到尾部sb.append(&quot;bing&quot;); // 执行结果：dabing// 插入字符串到到当前字符串下标的位置sb.insert(0,&quot;hi,&quot;); // 执行结果：hi,dabing// 修改字符中某个下标的值sb.setCharAt(0,&#39;H&#39;); // 执行结果：Hi,dabing</code></pre><p><strong>三者的区别：</strong></p><p><strong>线程安全</strong>：String 和 StringBuild 为非线程安全类，StringBuffer 为线程安全类；<br><strong>值可变</strong>：String 值不可变，StringBuild 和 StringBuffer 值可变；<br><strong>性能</strong>：StringBuffer 使用了 synchronization 保障了线程的安全，所以性能方面不如 StringBuild。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔试面试 </category>
+          
+          <category> JAVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+            <tag> 笔试面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JAVA数据结构与算法基础学习笔记(五)</title>
       <link href="/shu-ju-jie-gou-yu-suan-fa-bi-ji-wu-47433.html"/>
       <url>/shu-ju-jie-gou-yu-suan-fa-bi-ji-wu-47433.html</url>
@@ -31,37 +60,6 @@
             <tag> 学习笔记 </tag>
             
             <tag> 赫夫曼树 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JAVA笔试面试-字符串</title>
-      <link href="/java-bi-shi-mian-shi-zi-fu-chuan-48943.html"/>
-      <url>/java-bi-shi-mian-shi-zi-fu-chuan-48943.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="字符串介绍："><a href="#字符串介绍：" class="headerlink" title="字符串介绍："></a>字符串介绍：</h1><p>  字符串是程序开发当中，使用最频繁的类型之一，有着与基础类型相同的地位，甚至在 JVM（Java 虚拟机）编译的时候会对字符串做特殊的处理，比如拼加操作可能会被 JVM 直接合成为一个最终的字符串，从而到达高效运行的目的。</p><h2 id="1-、String-特性"><a href="#1-、String-特性" class="headerlink" title="1 、String 特性"></a>1 、String 特性</h2><p>String是标准的不可变类（immutable），对它的任何改动，其实就是创建了一个新对象，再把引用指向该对象；<br>Sting对象赋值之后就会在常量池中缓存，如果下次创建会判定常量池是否已经有缓存对象，如果有的话直接返回该引用给创建者。</p><h2 id="2-、字符串创建"><a href="#2-、字符串创建" class="headerlink" title="2 、字符串创建"></a>2 、字符串创建</h2><p>  两种方式：</p><pre><code>//字符串的创建形式String str1 = &quot;dabing&quot;;String str2 = new String(&quot;dabing&quot;);</code></pre><h2 id="3、字符串拼接"><a href="#3、字符串拼接" class="headerlink" title="3、字符串拼接"></a>3、字符串拼接</h2><pre><code>//字符串的拼接String str3 = &quot;da&quot;+&quot;bing&quot;;String str4 = &quot;da&quot;;str4  += &quot;bing&quot;;String str4 = &quot;da&quot;; String str6 = str + &quot;wang&quot;;</code></pre><h2 id="4、-字符串截取"><a href="#4、-字符串截取" class="headerlink" title="4、 字符串截取"></a>4、 字符串截取</h2><p>  字符串的截取使用 substring() 方法，使用如下：</p><pre><code>//字符串的两种截取方式String str5 = &quot;abcdefg&quot;;//从下标为3的开始截取，包含开始下标，输出cdefgSystem.out.println(str5.substring(3));//从下标为2开始截取下标为4的，包含开始下标不包含结束下标，输出cdSystem.out.println(str5.substring(2, 4));</code></pre><h2 id="5-、字符对比及”-”-和-equals-的区别是什么？"><a href="#5-、字符对比及”-”-和-equals-的区别是什么？" class="headerlink" title="5 、字符对比及”==” 和 equals 的区别是什么？"></a>5 、字符对比及”==” 和 equals 的区别是什么？</h2><p>  “==” 对基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重写了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。<br>示例代码：</p><pre><code>String x = &quot;string&quot;;String y = &quot;string&quot;;String z = new String(&quot;string&quot;);System.out.println(x==y); // trueSystem.out.println(x==z); // falseSystem.out.println(x.equals(y)); // trueSystem.out.println(x.equals(z)); // true</code></pre><p>解析：因为 x 和 y 指向的是同一个引用，所以 “==” 也是 true，而 new String() 方法则重写开辟了内存空间，所以 == 结果为 false，而 equals 比较的一直是值，所以结果都为 true。</p><pre><code>String s1 = &quot;hi,&quot; + &quot;da&quot; + &quot;bing&quot;;String s2 = &quot;hi,&quot;;s2 += &quot;da&quot;;s2 += &quot;bing&quot;;String s3 = &quot;hi,dabing&quot;;System.out.println(s1.equals(s2)); // trueSystem.out.println(s1.equals(s3)); // trueSystem.out.println(s2.equals(s3)); // true</code></pre><h2 id="6-、String、StringBuffer、StringBuild"><a href="#6-、String、StringBuffer、StringBuild" class="headerlink" title="6 、String、StringBuffer、StringBuild"></a>6 、String、StringBuffer、StringBuild</h2><p>  StringBuffer、StringBuild 都是可以变的字符串类型，StringBuild 和 String 相似都是非线程安全的，所以多线程下推荐使用 StringBuffer。<br>  StringBuffer 使用：</p><pre><code>StringBuffer sb = new StringBuffer(&quot;da&quot;);// 添加字符串到尾部sb.append(&quot;bing&quot;); // 执行结果：dabing// 插入字符串到到当前字符串下标的位置sb.insert(0,&quot;hi,&quot;); // 执行结果：hi,dabing// 修改字符中某个下标的值sb.setCharAt(0,&#39;H&#39;); // 执行结果：Hi,dabing</code></pre><p><strong>三者的区别：</strong></p><p><strong>线程安全</strong>：String 和 StringBuild 为非线程安全类，StringBuffer 为线程安全类；<br><strong>值可变</strong>：String 值不可变，StringBuild 和 StringBuffer 值可变；<br><strong>性能</strong>：StringBuffer 使用了 synchronization 保障了线程的安全，所以性能方面不如 StringBuild。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔试面试 </category>
-          
-          <category> JAVA </category>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JAVA </tag>
-            
-            <tag> 笔试面试 </tag>
             
         </tags>
       
