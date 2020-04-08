@@ -48,18 +48,20 @@
           
           <category> JAVA </category>
           
+          <category> 学习笔记 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> 数据结构 </tag>
             
-            <tag> 学习笔记 </tag>
-            
             <tag> 赫夫曼树 </tag>
+            
+            <tag> JAVA </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
       
@@ -72,7 +74,7 @@
       <link href="/shu-ju-jie-gou-yu-suan-fa-bi-ji-si-48925.html"/>
       <url>/shu-ju-jie-gou-yu-suan-fa-bi-ji-si-48925.html</url>
       
-        <content type="html"><![CDATA[<h1 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h1><h2 id="树结构概述"><a href="#树结构概述" class="headerlink" title="树结构概述"></a>树结构概述</h2><h3 id="什么是树结构"><a href="#什么是树结构" class="headerlink" title="什么是树结构"></a>什么是树结构</h3><h3 id="为什么使用树结构"><a href="#为什么使用树结构" class="headerlink" title="为什么使用树结构"></a>为什么使用树结构</h3><h3 id="树的基本概念"><a href="#树的基本概念" class="headerlink" title="树的基本概念"></a>树的基本概念</h3><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树:"></a>二叉树:</h2><h3 id="什么是二叉树"><a href="#什么是二叉树" class="headerlink" title="什么是二叉树"></a>什么是二叉树</h3><ol><li><strong>满二叉树</strong>：所有叶子节点都在最后一层，而且节点的总数为：2^n-1,n是树的高度。</li><li><strong>完全二叉树</strong>：所有叶子节点都在最后一层或倒数第二层，且最后一层的叶子节点在左边连续，倒数第二节的叶子节点在右边连续。</li></ol><h3 id="链式存储的二叉树"><a href="#链式存储的二叉树" class="headerlink" title="链式存储的二叉树"></a>链式存储的二叉树</h3><p><strong>1. 创建二叉树</strong><br><strong>2. 添加节点</strong><br><strong>3. 树的遍历</strong><br>前序遍历<br>中序遍历<br>后序遍历<br><strong>4. 查找节点</strong><br><strong>5. 删除节点</strong></p><h3 id="顺序存储的二叉树"><a href="#顺序存储的二叉树" class="headerlink" title="顺序存储的二叉树"></a>顺序存储的二叉树</h3><ol><li>顺序存储的二叉树通常只考虑完全二叉树</li><li>第n个元素的左子节点是：2*n+1</li><li>第n个元素的右子节点是：2*n+2</li><li>第n个元素的父节点是：(n-1)/2<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><h2 id="AVL树"><a href="#AVL树" class="headerlink" title="AVL树"></a>AVL树</h2><h2 id="多路查找树"><a href="#多路查找树" class="headerlink" title="多路查找树"></a>多路查找树</h2></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h1><h2 id="树结构概述"><a href="#树结构概述" class="headerlink" title="树结构概述"></a>树结构概述</h2><h3 id="什么是树结构"><a href="#什么是树结构" class="headerlink" title="什么是树结构"></a>什么是树结构</h3><h3 id="为什么使用树结构"><a href="#为什么使用树结构" class="headerlink" title="为什么使用树结构"></a>为什么使用树结构</h3><h3 id="树的基本概念"><a href="#树的基本概念" class="headerlink" title="树的基本概念"></a>树的基本概念</h3><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树:"></a>二叉树:</h2><h3 id="什么是二叉树"><a href="#什么是二叉树" class="headerlink" title="什么是二叉树"></a>什么是二叉树</h3><ol><li><strong>满二叉树</strong>：所有叶子节点都在最后一层，而且节点的总数为：2^n-1,n是树的高度。</li><li><strong>完全二叉树</strong>：所有叶子节点都在最后一层或倒数第二层，且最后一层的叶子节点在左边连续，倒数第二节的叶子节点在右边连续。</li></ol><h3 id="链式存储的二叉树"><a href="#链式存储的二叉树" class="headerlink" title="链式存储的二叉树"></a>链式存储的二叉树</h3><p><strong>1. 创建二叉树</strong><br><strong>2. 添加节点</strong><br><strong>3. 树的遍历</strong><br>前序遍历<br>中序遍历<br>后序遍历<br><strong>4. 查找节点</strong><br><strong>5. 删除节点</strong></p><h3 id="顺序存储的二叉树"><a href="#顺序存储的二叉树" class="headerlink" title="顺序存储的二叉树"></a>顺序存储的二叉树</h3><ol><li>顺序存储的二叉树通常只考虑完全二叉树</li><li>第n个元素的左子节点是：2*n+1</li><li>第n个元素的右子节点是：2*n+2</li><li>第n个元素的父节点是：(n-1)/2<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><h3 id="二叉排序树概述"><a href="#二叉排序树概述" class="headerlink" title="二叉排序树概述"></a>二叉排序树概述</h3><h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3><h3 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h3><h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><h2 id="AVL树"><a href="#AVL树" class="headerlink" title="AVL树"></a>AVL树</h2><h2 id="多路查找树"><a href="#多路查找树" class="headerlink" title="多路查找树"></a>多路查找树</h2></li></ol>]]></content>
       
       
       <categories>
@@ -83,14 +85,16 @@
           
           <category> JAVA </category>
           
+          <category> 学习笔记 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -118,14 +122,16 @@
           
           <category> JAVA </category>
           
+          <category> 学习笔记 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -151,18 +157,20 @@
           
           <category> JAVA </category>
           
+          <category> 学习笔记 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> 数据结构 </tag>
             
-            <tag> 算法 </tag>
+            <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -184,18 +192,20 @@
           
           <category> JAVA </category>
           
+          <category> 学习笔记 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> 数据结构 </tag>
             
-            <tag> 算法 </tag>
+            <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
