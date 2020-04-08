@@ -13,9 +13,11 @@
       
       <categories>
           
+          <category> JAVA </category>
+          
           <category> 笔试面试 </category>
           
-          <category> JAVA </category>
+          <category> 学习笔记 </category>
           
       </categories>
       
@@ -25,6 +27,8 @@
             <tag> JAVA </tag>
             
             <tag> 笔试面试 </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
       
@@ -55,11 +59,11 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 赫夫曼树 </tag>
             
@@ -92,11 +96,11 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 树结构 </tag>
             
@@ -129,11 +133,11 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 排序算法 </tag>
             
@@ -166,13 +170,13 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
             
-            <tag> 赫夫曼树 </tag>
+            <tag> 数据结构 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -203,13 +207,13 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
-            <tag> 算法 </tag>
-            
             <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
