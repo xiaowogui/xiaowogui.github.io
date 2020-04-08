@@ -15,8 +15,6 @@
           
           <category> JAVA </category>
           
-          <category> 数据结构 </category>
-          
           <category> 笔试面试 </category>
           
       </categories>
@@ -24,9 +22,9 @@
       
         <tags>
             
-            <tag> JAVA </tag>
-            
             <tag> 笔试面试 </tag>
+            
+            <tag> JAVA </tag>
             
         </tags>
       
@@ -57,9 +55,9 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> JAVA </tag>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -94,9 +92,9 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> JAVA </tag>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -131,9 +129,9 @@
       
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> JAVA </tag>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -168,11 +166,11 @@
       
         <tags>
             
+            <tag> JAVA </tag>
+            
             <tag> 数据结构 </tag>
             
             <tag> 算法 </tag>
-            
-            <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
             
@@ -205,11 +203,11 @@
       
         <tags>
             
+            <tag> JAVA </tag>
+            
             <tag> 数据结构 </tag>
             
             <tag> 算法 </tag>
-            
-            <tag> JAVA </tag>
             
             <tag> 学习笔记 </tag>
             
