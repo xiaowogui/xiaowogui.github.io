@@ -486,14 +486,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    577
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 				
@@ -518,7 +518,7 @@
 <li>顺序存储的二叉树通常只考虑完全二叉树</li>
 <li>第n个元素的左子节点是：2*n+1</li>
 <li>第n个元素的右子节点是：2*n+2</li>
-<li>第n个元素的父节点是：(n-1)/2<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><h3 id="二叉排序树概述"><a href="#二叉排序树概述" class="headerlink" title="二叉排序树概述"></a>二叉排序树概述</h3>BST对于二叉树中的任何一个非叶子节点，要求左子节点比当前节点值小，右子节点比当前节点值大。<h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3></li>
+<li>第n个元素的父节点是：(n-1)/2<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><h3 id="二叉排序树概述"><a href="#二叉排序树概述" class="headerlink" title="二叉排序树概述"></a>二叉排序树概述</h3>BST对于二叉树中的任何一个非叶子节点，要求左子节点比当前节点值小，右子节点比当前节点值大。<h3 id="添加节点、查找节点、删除节点"><a href="#添加节点、查找节点、删除节点" class="headerlink" title="添加节点、查找节点、删除节点"></a>添加节点、查找节点、删除节点</h3></li>
 </ol>
 <pre><code>package demo11;
 public class BinarySortTree{
@@ -538,14 +538,114 @@ public class BinarySortTree{
   } 
 
   /**
-  *中序遍历二叉排序树，从小到大
+  *中序遍历二叉排序树，从小到大的顺序
   *@param root
   */
-  public void frontShow(){
+  public void midShow(){
     if(root!=null){
-        root.frontShow(root);
+        root.midShow(root);
     }
   }
+
+  /**
+  *节点的查找
+  *@param value
+  *@return
+  */
+  public Node search(int value){
+    if(root==null){
+        return null;
+    }else{
+      return root.search(value);
+    }
+  }
+
+  /**
+  *节点的查找
+  *@param value
+  */
+  public void delete(int value){
+    if(root==null){
+        return;
+    }else{
+      //找到这个节点
+      Node target = search(value);
+      //如果没有这个节点
+      if(target==null){
+          return;
+      }
+      //找到他的父节点
+      Node parent = searchParent(value);
+      //要删除的节点是叶子节点
+      if(target.left==null&amp;&amp;target.right==null){
+          //要删除的节点是父节点是左子节点
+          if(parent.left.value==value){
+              parent.left=null;
+              //要删除的节点是父节点的右子节点
+          }else{
+              parent.right=null;
+          }
+          //要删除的节点有两个子节点的情况
+      }else if(target.left!=null&amp;&amp;target.right!=null){
+              //删除右子树中值最小的节点，获取到该节点的值
+              int min = deleteMain(target.right);
+              //替换目标节点中的值
+              target.value = min;
+          //要删除的节点有一个左子节点或右子节点
+      }else{
+          //有左子节点
+          if(target.left!=null){
+            //要删除的节点是父节点是左子节点
+              if(parent.left.value==value){
+                  parent.left=target.left;
+                  //要删除的节点是父节点的右子节点
+              }else{
+                  parent.right=target.left;
+              }
+          //有右子节点
+          }else{
+                //要删除的节点是父节点是左子节点
+                if(parent.left.value==value){
+                    parent.left=target.right;
+                    //要删除的节点是父节点的右子节点
+                }else{
+                    parent.right=target.right;
+                }
+          }
+      }
+    }
+  }
+
+ /**
+  *删除一颗树中最小的节点
+  *@param node
+  *@return
+  */
+  private int deleteMin(Node node){
+      Node target = node;
+      //递归向左找
+      while(target.left!=null){
+          target=target.left;
+      }
+      //删除最小的这个节点
+      delete(target.value);
+      return target.value;
+  }
+
+
+ /**
+  *搜索父节点
+  *@param value
+  *@return
+  */
+  public Node searchParent(int value){
+      if(root==null){
+          return null;
+      }else{
+        return root.searchParent(value);
+      }
+  }
+
 }
 
 &lt;!-- ============================== --&gt;
@@ -589,15 +689,56 @@ public class Node(){
 
   /**
   *中序遍历
-  *@param root
+  *@param node
   */
-  public void frontShow(Node root){
+  public void midShow(Node node){
       if(node==null){
           return;
       }
-      node.left.frontShow(node);
-      node.right.frontShow(node);
+      midShow(node.left);
+      midShow(node.right);
   }
+
+  /**
+  *节点的查找
+  *@param value
+  *@return
+  */
+  public Node search(int value){
+    if(this.value==value){
+        return this;
+    }else if(value&lt;this.value){
+        if(left==null){
+          return null;
+        }
+        return left.search(value);
+    }else{
+      if(right==null){
+        return null;
+      }
+      return right.search(value);
+    }
+  }
+
+  /**
+  *搜索父节点
+  *@param value
+  *@return
+  */
+  public Node searchParent(int value){
+    if((this.left!=null&amp;&amp;this.left.value==value)||(this.right!=null&amp;&amp;this.right.value==value)){
+        return this;
+    }else{
+      if(this.value&gt;value){
+            return this.left.searchParent(value);
+      }else{
+            return this.right.searchParent(value);
+      }
+    }
+      return null;
+  }
+
+
 }
 
 &lt;!-- ================================= --&gt;
@@ -612,8 +753,23 @@ public class TestBinarySortTree{
     for(int i:arr){
         bst.add(new Node(i));
     }
+    //查看树中的值
+    bst.midShow();
+    //查找
+    Node node = bst.search(10);
+    //System.out.println(node.value);
+    //删除叶子节点
+    bst.delete(5);
+    bst.midShow();
+    System.out.println(&quot;========&quot;);
+    //删除只有一个子节点的节点
+    bst.delete(3);
+    bst.midShow();
+    //删除有两个子节点的节点
+    bst.delete(3);
+    bst.midShow();
   }
-}</code></pre><h3 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h3><h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><h2 id="AVL树"><a href="#AVL树" class="headerlink" title="AVL树"></a>AVL树</h2><h2 id="多路查找树"><a href="#多路查找树" class="headerlink" title="多路查找树"></a>多路查找树</h2>
+}</code></pre><h2 id="AVL树"><a href="#AVL树" class="headerlink" title="AVL树"></a>AVL树</h2><h2 id="多路查找树"><a href="#多路查找树" class="headerlink" title="多路查找树"></a>多路查找树</h2>
             </div>
             <hr/>
 
@@ -1414,7 +1570,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.9k</span>&nbsp;字
+                class="white-color">11.2k</span>&nbsp;字
             
             
             

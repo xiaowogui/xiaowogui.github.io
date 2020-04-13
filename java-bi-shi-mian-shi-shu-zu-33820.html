@@ -5,9 +5,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JAVA笔试面试-字符串, HTML,CSS,JavaScript,React,React Native,java,Spring Boot等">
-    <meta name="description" content="字符串介绍：  字符串是程序开发当中，使用最频繁的类型之一，有着与基础类型相同的地位，甚至在 JVM（Java 虚拟机）编译的时候会对字符串做特殊的处理，比如拼加操作可能会被 JVM 直接合成为一个最终的字符串，从而到达高效运行的目的。
-1">
+    <meta name="keywords" content="JAVA笔试面试-数组, HTML,CSS,JavaScript,React,React Native,java,Spring Boot等">
+    <meta name="description" content="Java笔试面试-数组数组初始化  数组可使用 new int[n] 进行初始化，每个元素初始化为 0，声明了 n 个元素。也可以直接赋值，例如 new int[]{ 1,2,3…… }，具体用法可参照下面代码：
+// 初始化方式一
+int">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="baidu-site-verification" content="SbYztaJHBQ">
-    <title>JAVA笔试面试-字符串 | 爬行园地</title>
+    <title>JAVA笔试面试-数组 | 爬行园地</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JAVA笔试面试-字符串</h1>
+                    <h1 class="description center-align post-title">JAVA笔试面试-数组</h1>
                 </div>
             </div>
         </div>
@@ -435,6 +436,10 @@
                                 <span class="chip bg-color">JAVA</span>
                             </a>
                         
+                            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">数组</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -460,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-08
+                    2020-04-13
                 </div>
                 
 
@@ -469,14 +474,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    791
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 				
@@ -492,44 +497,174 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="字符串介绍："><a href="#字符串介绍：" class="headerlink" title="字符串介绍："></a>字符串介绍：</h1><p>  字符串是程序开发当中，使用最频繁的类型之一，有着与基础类型相同的地位，甚至在 JVM（Java 虚拟机）编译的时候会对字符串做特殊的处理，比如拼加操作可能会被 JVM 直接合成为一个最终的字符串，从而到达高效运行的目的。</p>
-<h2 id="1-、String-特性"><a href="#1-、String-特性" class="headerlink" title="1 、String 特性"></a>1 、String 特性</h2><p>String是标准的不可变类（immutable），对它的任何改动，其实就是创建了一个新对象，再把引用指向该对象；<br>Sting对象赋值之后就会在常量池中缓存，如果下次创建会判定常量池是否已经有缓存对象，如果有的话直接返回该引用给创建者。</p>
-<h2 id="2-、字符串创建"><a href="#2-、字符串创建" class="headerlink" title="2 、字符串创建"></a>2 、字符串创建</h2><p>  两种方式：</p>
-<pre><code>//字符串的创建形式
-String str1 = &quot;dabing&quot;;
-String str2 = new String(&quot;dabing&quot;);</code></pre><h2 id="3、字符串拼接"><a href="#3、字符串拼接" class="headerlink" title="3、字符串拼接"></a>3、字符串拼接</h2><pre><code>//字符串的拼接
-String str3 = &quot;da&quot;+&quot;bing&quot;;
-String str4 = &quot;da&quot;;str4  += &quot;bing&quot;;
-String str4 = &quot;da&quot;; String str6 = str + &quot;wang&quot;;</code></pre><h2 id="4、-字符串截取"><a href="#4、-字符串截取" class="headerlink" title="4、 字符串截取"></a>4、 字符串截取</h2><p>  字符串的截取使用 substring() 方法，使用如下：</p>
-<pre><code>//字符串的两种截取方式
-String str5 = &quot;abcdefg&quot;;
-//从下标为3的开始截取，包含开始下标，输出cdefg
-System.out.println(str5.substring(3));
-//从下标为2开始截取下标为4的，包含开始下标不包含结束下标，输出cd
-System.out.println(str5.substring(2, 4));</code></pre><h2 id="5-、字符对比及”-”-和-equals-的区别是什么？"><a href="#5-、字符对比及”-”-和-equals-的区别是什么？" class="headerlink" title="5 、字符对比及”==” 和 equals 的区别是什么？"></a>5 、字符对比及”==” 和 equals 的区别是什么？</h2><p>  “==” 对基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重写了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。<br>示例代码：</p>
-<pre><code>String x = &quot;string&quot;;
-String y = &quot;string&quot;;
-String z = new String(&quot;string&quot;);
-System.out.println(x==y); // true
-System.out.println(x==z); // false
-System.out.println(x.equals(y)); // true
-System.out.println(x.equals(z)); // true</code></pre><p>解析：因为 x 和 y 指向的是同一个引用，所以 “==” 也是 true，而 new String() 方法则重写开辟了内存空间，所以 == 结果为 false，而 equals 比较的一直是值，所以结果都为 true。</p>
-<pre><code>String s1 = &quot;hi,&quot; + &quot;da&quot; + &quot;bing&quot;;
-String s2 = &quot;hi,&quot;;
-s2 += &quot;da&quot;;
-s2 += &quot;bing&quot;;
-String s3 = &quot;hi,dabing&quot;;
-System.out.println(s1.equals(s2)); // true
-System.out.println(s1.equals(s3)); // true
-System.out.println(s2.equals(s3)); // true</code></pre><h2 id="6-、String、StringBuffer、StringBuild"><a href="#6-、String、StringBuffer、StringBuild" class="headerlink" title="6 、String、StringBuffer、StringBuild"></a>6 、String、StringBuffer、StringBuild</h2><p>  StringBuffer、StringBuild 都是可以变的字符串类型，StringBuild 和 String 相似都是非线程安全的，所以多线程下推荐使用 StringBuffer。<br>  StringBuffer 使用：</p>
-<pre><code>StringBuffer sb = new StringBuffer(&quot;da&quot;);
-// 添加字符串到尾部
-sb.append(&quot;bing&quot;); // 执行结果：dabing
-// 插入字符串到到当前字符串下标的位置
-sb.insert(0,&quot;hi,&quot;); // 执行结果：hi,dabing
-// 修改字符中某个下标的值
-sb.setCharAt(0,&#39;H&#39;); // 执行结果：Hi,dabing</code></pre><p><strong>三者的区别：</strong></p>
-<p><strong>线程安全</strong>：String 和 StringBuild 为非线程安全类，StringBuffer 为线程安全类；<br><strong>值可变</strong>：String 值不可变，StringBuild 和 StringBuffer 值可变；<br><strong>性能</strong>：StringBuffer 使用了 synchronization 保障了线程的安全，所以性能方面不如 StringBuild。</p>
+                <h1 id="Java笔试面试-数组"><a href="#Java笔试面试-数组" class="headerlink" title="Java笔试面试-数组"></a>Java笔试面试-数组</h1><h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><p>  数组可使用 new int[n] 进行初始化，每个元素初始化为 0，声明了 n 个元素。也可以直接赋值，例如 new int[]{ 1,2,3…… }，具体用法可参照下面代码：</p>
+<pre><code>// 初始化方式一
+int[] arr = new int[5];
+// 初始化方式二
+int[] arr2 = new int[]{1, 2, 3, 4, 5};
+// 初始化方式二的延伸版，可省略 new int[] 直接赋值
+int[] arr3 = {1, 2, 3, 4, 5};</code></pre><blockquote>
+<p>注意：在 Java 中，数组初始化如果声明了数组长度，则不能直接赋值。例如，int[] arr = new int[5]{1, 2, 3, 4, 5}; 给这段初始化数组长度并赋值时，编译器会报错，编译不通过。</p>
+</blockquote>
+<h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><p><strong>方式一：传统 for 循环</strong></p>
+<pre><code>Integer[] arr = {2, 3, 6, 7, 9};
+// 方式一：传统 for
+for (int i = 0; i &lt; arr.length; i++) {
+  System.out.println(arr[i]);
+}</code></pre><p><strong>方式二：for each(增强型for循环）</strong></p>
+<pre><code>Integer[] arr = {2, 3, 6, 7, 9};
+// 方式二：for each
+for (int i : arr) {
+  System.out.println(i);
+}</code></pre><p><strong>方式三：JDK 8 中的 Limbda 表达式</strong></p>
+<pre><code>Integer[] arr = {2, 3, 6, 7, 9};
+// 方式三：jdk 8 Limbda
+Arrays.asList(arr).forEach(x -&gt; System.out.println(x));
+</code></pre><h2 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h2><p><strong>数组拷贝使用的是 Arrays.copyof() 方法：</strong></p>
+<pre><code>int[] arr = {3, 4, 9};
+int[] arr2 = Arrays.copyOf(arr, arr.length);
+System.out.println(Arrays.toString(arr2));
+//程序执行结果：[3, 4, 9]</code></pre><h2 id="数组填充"><a href="#数组填充" class="headerlink" title="数组填充"></a>数组填充</h2><p><strong>使用 Arrays.fill() 进行数组填充：</strong></p>
+<pre><code>int[] arr = new int[10];
+Arrays.fill(arr, 6);
+System.out.println(Arrays.toString(arr));
+//使用 Arrays.fill() 会覆盖原有的值，即使数组之前有赋值操作，也会被覆盖。</code></pre><h2 id="数组合并"><a href="#数组合并" class="headerlink" title="数组合并"></a>数组合并</h2><pre><code>使用 org.apache.commons.lang3.ArrayUtils.addAll() 方法：
+int[] arr = {2, 8, 13, 11, 6, 7};
+int[] arr2 = {66, 88};
+// 合并数组
+int[] arr3 = org.apache.commons.lang3.ArrayUtils.addAll(arr, arr2);
+System.out.println(Arrays.toString(arr3));
+//程序执行结果：[2, 8, 13, 11, 6, 7, 66, 88]</code></pre><h2 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h2><pre><code>int[] arr = {2, 8, 13, 11, 6, 7};
+Arrays.sort(arr);
+System.out.println(Arrays.toString(arr));
+//程序执行结果：[2, 6, 7, 8, 11, 13]</code></pre><h2 id="数组逆序"><a href="#数组逆序" class="headerlink" title="数组逆序"></a>数组逆序</h2><pre><code>int[] arr = {2, 8, 13, 11, 6, 7};
+int[] arr = {2, 8, 13, 11, 6, 7};
+// 数组正序（排序）
+Arrays.sort(arr);
+// 数组逆序
+org.apache.commons.lang3.ArrayUtils.reverse(arr);
+System.out.println(Arrays.toString(arr));
+//程序执行结果：[13, 11, 8, 7, 6, 2]
+//注意：org.apache.commons.lang3.ArrayUtils.reverse() 是数组逆序，
+//并不是数组倒序，也就是说 ArrayUtils.reverse() 只会把数组原顺序颠倒输出，并不会自然排序后再倒序输出。</code></pre><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><pre><code>//依次比较相邻的两个数，把较大的值放在前面，执行整个循环之后，数组就从大到小进行排列了。
+int[] arr = {2, 8, 13, 11, 6, 7};
+System.out.println(&quot;排序前：&quot; + Arrays.toString(arr));
+for (int i = 0; i &lt; arr.length; i++) {
+    for (int j = 0; j &lt; arr.length; j++) {
+        if (arr[i] &gt; arr[j]) {
+            // 元素交换
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+}
+System.out.println(&quot;排序后：&quot; + Arrays.toString(arr));
+//排序前：[2, 8, 13, 11, 6, 7]
+//排序后：[13, 11, 8, 7, 6, 2]</code></pre><h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><pre><code>//每次从待排序的数据元素中选出最小（或最大）的一个元素，
+//顺序放在已排好序的数列的最后，直到全部待排序的数据元素排完。
+int[] arr = {2, 8, 13, 11, 6, 7};
+System.out.println(&quot;排序前：&quot; + Arrays.toString(arr));
+for (int i = 0; i &lt; arr.length; i++) {
+  int lowerIndex = i;
+  for (int j = i + 1; j &lt; arr.length; j++) {
+    // 找出最小的一个索引
+    if (arr[j] &lt; arr[lowerIndex]) {
+      lowerIndex = j;
+    }
+  }
+  // 交换
+  int temp = arr[i];
+  arr[i] = arr[lowerIndex];
+  arr[lowerIndex] = temp;
+}
+System.out.println(&quot;排序后：&quot; + Arrays.toString(arr));
+//排序前：[2, 8, 13, 11, 6, 7]
+//排序后：[2, 6, 7, 8, 11, 13]</code></pre><h2 id="元素查找"><a href="#元素查找" class="headerlink" title="元素查找"></a>元素查找</h2><pre><code>//查找数组是否包含某个值，使用 Arrays.binarySearch() 方法查询。 
+//Arrays.binarySearch() 是利用二分法查询某个值，
+//如果查到包含某值会返回该值的下标，如果没有查到则返回负值。
+int[] arr = {1, 3, 4, 5};
+// Arrays.binarySearch() 使用二分法查询某值
+int index = Arrays.binarySearch(arr, 5);
+System.out.println(index);</code></pre><h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><pre><code>// 声明二维数组
+int[][] arr = new int[2][4];
+//循环二维数组
+for (int i = 0; i &lt; arr.length; i++) {
+    for (int j = 0; j &lt; arr[0].length; j++) {
+        // 二维数组赋值
+        arr[i][j] = j;
+    }
+}
+// 二维数组取值
+System.out.println(arr[0][1]);
+// 打印二维数组
+System.out.println(Arrays.toString(arr[0]));
+System.out.println(Arrays.toString(arr[1]));
+//以上程序执行的结果是：
+//1
+//[0, 1, 2, 3]
+//[0, 1, 2, 3]</code></pre><h2 id="字符串转数组"><a href="#字符串转数组" class="headerlink" title="字符串转数组"></a>字符串转数组</h2><pre><code>//使用 split 分隔字符串就形成了数组：
+String str = &quot;laowang,stone,wanglei&quot;;
+String[] arr = str.split(&quot;,&quot;); // 字符串转数组
+System.out.println(arr[0]);</code></pre><h2 id="数组转字符串"><a href="#数组转字符串" class="headerlink" title="数组转字符串"></a>数组转字符串</h2><pre><code>//使用 Arrays.toString() 方法：
+String[] arr = {&quot;laowang&quot;, &quot;stone&quot;, &quot;wanglei&quot;};
+String str = Arrays.toString(arr);
+System.out.println(str);</code></pre><h2 id="数组转集合"><a href="#数组转集合" class="headerlink" title="数组转集合"></a>数组转集合</h2><pre><code>//使用 Arrays.asList() 方法:
+String[] strArr = {&quot;cat&quot;, &quot;dog&quot;};
+List list = Arrays.asList(strArr);
+System.out.println(list);</code></pre><h2 id="集合转数组"><a href="#集合转数组" class="headerlink" title="集合转数组"></a>集合转数组</h2><pre><code>//使用 List.toArrray() 方法:
+List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+list.add(&quot;cat&quot;);
+list.add(&quot;dog&quot;);
+// 集合转换为数组
+String[] arr = list.toArray(new String[list.size()]);
+System.out.println(Arrays.toString(arr));</code></pre><h1 id="相关面试题"><a href="#相关面试题" class="headerlink" title="相关面试题"></a>相关面试题</h1><ol>
+<li>数组和集合有什么区别？<blockquote>
+<p>1.集合可以存储任意类型的对象数据，数组只能存储同一种数据类型的数据；<br>2.集合的长度是会发生变化的，数组的长度是固定的；<br>3.集合相比数组功能更强大，数组相比集合效率更高。</p>
+</blockquote>
+</li>
+<li>以下代码访问数组元素打印的结果是多少？<pre><code>int[] arr = new int[5] {1, 2, 3, 4, 5};
+System.out.println(arr[4]);</code></pre><blockquote>
+<p>答：程序编译报错，在 Java 中初始化数组时，如果直接给数组赋值，不能声明数组长度；如果声明了数组长度，则不能赋值给数组，否则编译器报错。</p>
+</blockquote>
+</li>
+<li>执行以下代码会输出什么结果？<pre><code>public static void main(String[] args) {
+ int[] arr = {2, 3, 4, 8};
+ change(arr);
+ System.out.println(arr[2]);
+}
+private static void change(int[] arr) {
+ for (int i = 0; i &lt; arr.length; i++) {
+     if (i % 2 == 0) {
+         arr[i] *= i;
+     }
+ }
+}</code></pre><blockquote>
+<p>输出的结果是 8。<br>题目解析：在 Java 中数组本质是引用类型，因此在调用方法中修改数组，就是对原数组本身的修改。</p>
+</blockquote>
+</li>
+<li>Arrays 对象有哪些常用的方法？<blockquote>
+<p>Arrays.copyOf() 数组拷贝<br>Arrays.asList() 数组转为 List 集合<br>Arrays.fill() 数组赋值<br>Arrays.sort() 数组排序<br>Arrays.toString() 数组转字符串<br>Arrays.binarySearch() 二分法查询元素<br>Arrays.equals() 比较两个数组的值</p>
+</blockquote>
+</li>
+<li>查询字符串数组中是否包含某个值有几种方法？<pre><code>//方式一：Arrays.asList(array).contains(“key”);
+//方式二：Arrays.binarySearch(array, “key”);
+String[] arr = {&quot;doc&quot;, &quot;pig&quot;, &quot;cat&quot;};
+// 方式一：Arrays.asList(array).contains
+boolean bool = Arrays.asList(arr).contains(&quot;cat&quot;);
+System.out.println(bool);
+// 方式二：Arrays.binarySearch
+Arrays.sort(arr);
+boolean bool2 = Arrays.binarySearch(arr, &quot;cat&quot;) &gt; -1;
+System.out.println(bool2);</code></pre></li>
+<li>如何修改数组的第三个到第五个元素的值为 6？<br>方式一：for 循环方式<pre><code>int[] arrInt = new int[10];
+for (int i = 0; i &lt; arrInt.length; i++) {
+ if (i &gt;= 2 &amp;&amp; i &lt; 5) {
+     arrInt[i] = 6;
+ }
+}</code></pre>方式二：Arrays.fill() 方式<pre><code>int[] arrInt = new int[10];
+Arrays.fill(arrInt, 2, 5, 6);</code></pre></li>
+</ol>
 
             </div>
             <hr/>
@@ -555,7 +690,7 @@ sb.setCharAt(0,&#39;H&#39;); // 执行结果：Hi,dabing</code></pre><p><strong>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiaowogui.top/java-bi-shi-mian-shi-zi-fu-chuan-48943.html">https://xiaowogui.top/java-bi-shi-mian-shi-zi-fu-chuan-48943.html</a>
+                    <a href="https://xiaowogui.top/java-bi-shi-mian-shi-shu-zu-33820.html">https://xiaowogui.top/java-bi-shi-mian-shi-shu-zu-33820.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,6 +734,10 @@ sb.setCharAt(0,&#39;H&#39;); // 执行结果：Hi,dabing</code></pre><p><strong>
                             
                                 <a href="/tags/JAVA/">
                                     <span class="chip bg-color">JAVA</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">数组</span>
                                 </a>
                             
                         </div>
@@ -1027,9 +1166,74 @@ sb.setCharAt(0,&#39;H&#39;); // 执行结果：Hi,dabing</code></pre><p><strong>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/java-bi-shi-mian-shi-shu-zu-33820.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="JAVA笔试面试-数组">
+                        
+                        <span class="card-title">JAVA笔试面试-数组</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java笔试面试-数组数组初始化  数组可使用 new int[n] 进行初始化，每个元素初始化为 0，声明了 n 个元素。也可以直接赋值，例如 new int[]{ 1,2,3…… }，具体用法可参照下面代码：
+// 初始化方式一
+int
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
+                            <a href="/categories/JAVA/%E7%AC%94%E8%AF%95%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    笔试面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%94%E8%AF%95%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">笔试面试</span>
+                    </a>
+                    
+                    <a href="/tags/JAVA/">
+                        <span class="chip bg-color">JAVA</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/java-bi-shi-mian-shi-wan-zhuan-shi-jian-56088.html">
                     <div class="card-image">
@@ -1051,9 +1255,9 @@ LocalTime localTime =
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1079,81 +1283,6 @@ LocalTime localTime =
                     
                     <a href="/tags/JAVA/">
                         <span class="chip bg-color">JAVA</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/shu-ju-jie-gou-yu-suan-fa-bi-ji-wu-47433.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="JAVA数据结构与算法基础学习笔记(五)">
-                        
-                        <span class="card-title">JAVA数据结构与算法基础学习笔记(五)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            赫夫曼树赫夫曼树概述：也叫最优二叉树，它是n个带权叶子节点构成的所有二叉树中，带权路径长度最小的二叉树。
-赫夫曼树的代码实现package demo4;
-public class Node implements Comparable&lt;
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JAVA/" class="post-category">
-                                    JAVA
-                                </a>
-                            
-                            <a href="/categories/JAVA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                    数据结构
-                                </a>
-                            
-                            <a href="/categories/JAVA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            <a href="/categories/JAVA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JAVA/">
-                        <span class="chip bg-color">JAVA</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">学习笔记</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/">
-                        <span class="chip bg-color">赫夫曼树</span>
                     </a>
                     
                 </div>
