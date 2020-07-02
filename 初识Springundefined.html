@@ -5,10 +5,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JAVA数据结构与算法基础学习笔记(五), HTML,CSS,JavaScript,React,React Native,java,Spring Boot等">
-    <meta name="description" content="赫夫曼树赫夫曼树概述：也叫最优二叉树，它是n个带权叶子节点构成的所有二叉树中，带权路径长度最小的二叉树。
-赫夫曼树的代码实现package demo4;
-public class Node implements Comparable&amp;lt;">
+    <meta name="keywords" content="初识Spring, HTML,CSS,JavaScript,React,React Native,java,Spring Boot等">
+    <meta name="description" content="title: 初始Springdate: ‘2020-05-30 15:30;00’author: 小蜗龟top: truecategories:
+
+JAVA
+Springtags:
+Spring基础
+
+一、Spring是什么Spring是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@ public class Node implements Comparable&amp;lt;">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="baidu-site-verification" content="SbYztaJHBQ">
-    <title>JAVA数据结构与算法基础学习笔记(五) | 爬行园地</title>
+    <title>初识Spring | 爬行园地</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,7 +315,7 @@ public class Node implements Comparable&amp;lt;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JAVA数据结构与算法基础学习笔记(五)</h1>
+                    <h1 class="description center-align post-title">初识Spring</h1>
                 </div>
             </div>
         </div>
@@ -426,29 +430,12 @@ public class Node implements Comparable&amp;lt;">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/">
-                                <span class="chip bg-color">赫夫曼树</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                数据结构
-                            </a>
-                        
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -457,7 +444,7 @@ public class Node implements Comparable&amp;lt;">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-06-30
                 </div>
                 
 
@@ -466,14 +453,14 @@ public class Node implements Comparable&amp;lt;">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 				
@@ -489,296 +476,35 @@ public class Node implements Comparable&amp;lt;">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="赫夫曼树"><a href="#赫夫曼树" class="headerlink" title="赫夫曼树"></a>赫夫曼树</h1><h2 id="赫夫曼树概述："><a href="#赫夫曼树概述：" class="headerlink" title="赫夫曼树概述："></a>赫夫曼树概述：</h2><p>也叫最优二叉树，它是n个带权叶子节点构成的所有二叉树中，带权路径长度最小的二叉树。</p>
-<h2 id="赫夫曼树的代码实现"><a href="#赫夫曼树的代码实现" class="headerlink" title="赫夫曼树的代码实现"></a>赫夫曼树的代码实现</h2><pre><code>package demo4;
-public class Node implements Comparable&lt;Node&gt;{
-  int value;
-  Node left;
-  Node right;
+                <p>title: 初始Spring<br>date: ‘2020-05-30 15:30;00’<br>author: 小蜗龟<br>top: true<br>categories:</p>
+<ul>
+<li>JAVA</li>
+<li>Spring<br>tags:</li>
+<li>Spring基础</li>
+</ul>
+<h2 id="一、Spring是什么"><a href="#一、Spring是什么" class="headerlink" title="一、Spring是什么"></a>一、Spring是什么</h2><pre><code>Spring是一个开源框架，为了解决企业应用开发的复杂性而创建的，但现在已经不止应用于企业应用
 
-  public Node(int value){
-    this.value=value;
-  }
+      是一个轻量级的控制反转和面向切面的容器框架
 
-  @Override
-  public int compareTo(Node 0){
-    return -(this.value-o.value);
-  }
+      从大小和开销而言都是轻量级
 
-  @Override
-  public String toString(){
-    return &quot;Node [value=&quot;+ value + &quot;]&quot;;
-  }
-}
-&lt;!-- ==================================================== --&gt;
-package dome4;
-public class TestHuffmanTree{
-  public static void main(String[] args){
-    int[] arr = {3,7,8,29,5,11,23,14};
-    Node node = createHuffmanTree(arr);
-    System.out.println(node);
-  }
+      提供了丰富的切面编程丰富支持，允许通过分离应用的业务逻辑与系统级服进行内聚性的开发
 
-  //创建赫夫曼树
-  public static Node createHuffmanTree(int[] arr){
-    //先使用数组中所有的元素创建若干个二叉树，（只有一个节点）
-    List&lt;Node&gt; nodes = new ArrayList&lt;&gt;();
-    for(int value:arr){
-        nodes.add(new Node(value));
-    }
-    //循环处理
-    while(nodes.size()&gt;1){
-        //排序
-        Collections.sort(nodes);
-        //取出来权值最小的两个二叉树
-        Node left = nodes.get(nodes.size()-1);
-        Node right = nodes.get(nodes.size()-2);
-        //创建一颗新的二叉树
-        Node parent = new Node(left.value+right.value);
-        //把取出来的两个二叉树移除
-        nodes.remove(left);
-        nodes.remove(right);
-        //放入原来的二叉树聚合中
-        nodes.add(parent);
-    }
-    return nodes.get(0);
-  }
-}</code></pre><h3 id="赫夫曼树编码概述"><a href="#赫夫曼树编码概述" class="headerlink" title="赫夫曼树编码概述"></a>赫夫曼树编码概述</h3><h3 id="赫夫曼树编码解码代码实现"><a href="#赫夫曼树编码解码代码实现" class="headerlink" title="赫夫曼树编码解码代码实现"></a>赫夫曼树编码解码代码实现</h3><pre><code>package demo4;
-public class Node implements Comparable&lt;Node&gt;{
-  Byte data;
-  int weight;
-  Node left;
-  Node right;
-  public Node(Byte data,int weight){
-      this.data = data;
-      this.weight = weight;
-  }
+      包含并管理应用对象的配置和生命周期，这种意义上是一种容器
 
-  @Override
-  public int compareTo(Node o){
-      return o.weight-this.weight;
-  }
+      将简单的组件配置，组合成为复杂的应用，这种意义上来说是一种框架</code></pre><h2 id="二、Spring的特点"><a href="#二、Spring的特点" class="headerlink" title="二、Spring的特点"></a>二、Spring的特点</h2><h3 id="1、IOC和DI"><a href="#1、IOC和DI" class="headerlink" title="1、IOC和DI"></a>1、IOC和DI</h3><h4 id="IOC-控制反转"><a href="#IOC-控制反转" class="headerlink" title="IOC: 控制反转"></a>IOC: 控制反转</h4><p>即控制权的转移，将我们创建对象的方式反转了,以前对象的创建是由我们开发人员自己维护,包括依赖关系也是自己注入。使用了spring之后，对象的创建以及依赖关系可以由spring完成创建以及注入，反转控制就是反转了对象的创建方式，从我们自己创建反转给了程序创建(spring)</p>
+<h4 id="DI-Dependency-Injection-依赖注入"><a href="#DI-Dependency-Injection-依赖注入" class="headerlink" title="DI:  Dependency Injection  依赖注入"></a>DI:  Dependency Injection  依赖注入</h4><p>spring这个容器中，替你管理着一系列的类，前提是你需要将这些类交给spring容器进行管理，然后在你需要的时候，不是自己去定义，而是直接向spring容器索取，当spring容器知道你的需求之后，就会去它所管理的组件中进行查找，然后直接给你所需要的组件.</p>
+<h3 id="2-IOC-的实现"><a href="#2-IOC-的实现" class="headerlink" title="2.IOC 的实现"></a>2.IOC 的实现</h3><p>实现IOC思想需要DI做支持</p>
+<h5 id="配置Bean-通过全类名配置"><a href="#配置Bean-通过全类名配置" class="headerlink" title="配置Bean:通过全类名配置"></a>配置Bean:通过全类名配置</h5><p>id：一般用将类型的首字母改为小写<br>class：全类名,通过反射方式在IOC中创建Bean，要求Bean中必须有无参数的构造器</p>
+<p>注入方式:   1.set方式注入    2.构造方法注入   3.字段注入<br>注入类型:   1.值类型注入      2.引用类型注入<br>———————————————</p>
+<h5 id="注解配置"><a href="#注解配置" class="headerlink" title="注解配置"></a>注解配置</h5><p>1.对bean的标注基于注解方式有：</p>
+<p>@Component:放在一个类前边，他可以被Spring识别，Spring容器会自动将POJO转换为容器管理的Bean.他和XML配置是等效的：<br>@Repository：对DAO类进行标注<br>@Service：对Service类进行标注<br>@Controller：对Controller类进行标注<br>2.获得基于注解的bean配置信息，需要配置context:component-scan进行扫描<br>3.使用@Autowired注解实现Bean的依赖注入，默认按照类型byType的方式匹配；<br>@Autowired 标注的变量中。如果在Spring启动时没有一个和标注变量类型匹配的 bean ，则会抛NoSuchBeanDefinitionException 异常，如果希望 Spring 即使找不到匹配的 bean 也不要抛出异常，可以使用@Autowired(required=false) 进行标注</p>
+<h3 id="3-AOP"><a href="#3-AOP" class="headerlink" title="3.AOP"></a>3.AOP</h3><p>AOP是Spring框架的面向切面的编程思想，是对面向对象思想的一种补充，通俗的说就是将涉及多业务流程的通用功能抽取并单独封装，形成独立的切面，在合适的时机切入到业务流程指定的位置。它的出现是为了解决代码冗余问题，假设在一个复杂的业务系统中，用户登录是基础功能，存在多个业务涉及用户登录:<br>传统设计思想：把登录功能实现代码写入每个业务流程中，造成许多的代码冗余，维护和更新非常麻烦。</p>
+<p>使用动态代理思想：使用一个代理将对象包装起来，然后该代理对象取代原始对象，任何对原始对象的调用都要通过该代理，代理对象决定是否以及何时将方法调用转到原始对象上</p>
+<p>AOP的思想类似动态代理的思想，将这个登录功能抽取出来形成独立的模块，当业务流程需要用到的时候，系统自动将登录模块切入到业务流程中。</p>
+<h4 id="基本概念："><a href="#基本概念：" class="headerlink" title="基本概念："></a>基本概念：</h4><p>切面（Aspect）：一个横切关注点（跨越应用程序多个模块的功能）被模块化的特殊对象，一个关注点可能有多个对象，实现的方式是基于@Aspect注解<br>连接点（Jointpoint）在程序执行过程中某个特定的点，比如某方法调用的时候或者处理异常的时候，一个连接点总是表示一个方法的执行<br>通知（Advice）：在切面的某个特定连接点上执行的动作，是切面必须要完成的动作，有around，after，before等不同类型的通知<br>切入点（Pointcut）：匹配连接点的断言，通知和一个切入点表达式关联，并在满足这个切入点的连接点上运行<br>引入（Introduction）：用来给一个类型声明额外的方法或属性，Spring允许引入新的接口到任何被代理的对象<br>目标对象（Target Object）：被一个或多个切面通知的而对象<br>AOP代理（AOP Proxy）：AOP框架创建的对象，用来实现切面契约，执行动作，向目标对象应用通知之后创建的对象<br>织入（WeaVing）：把切面连接到其它的应用程序类型或者对象上，并创建一个被通知的对象</p>
+<h4 id="通知的类型"><a href="#通知的类型" class="headerlink" title="通知的类型"></a>通知的类型</h4><p>前置通知：在某连接点之前执行的通知，这个通知不能组织连接点之前的执行流程<br>后置通知：在某连接点正常完成后执行的通知<br>异常通知：在方法抛出异常退出时执行的通知<br>最终通知：当某连接点退出的时候执行的通知（不论是正常返回还是异常退出）<br>环绕通知：保卫一个连接点的通知，如方法调用</p>
 
-  @Override
-  public String toString(){
-    return &quot;Node [data=&quot;+ data + &quot;, weight=&quot;+ weight + &quot;]&quot;;
-  }
-}
-&lt;!-- ==================================================== --&gt;
-
-package demo10;
-import java.util.ArrayList;
-public class TestHuffmanCode{
-public static void main(String[] args){
-    String msg = &quot;can you can a can as a can canner can a can.&quot;;
-    byte[] bytes = msg.getBytes();
-    //创建赫夫曼树编码
-    byte[] b = huffmanZip(bytes);
-    //使用赫夫曼编码进行解码
-    byte[] newBytes = decode(huffCodes,b);
-    System.out.println(new String(newBytes));
-}
-
-/**
-*使用指定的赫夫曼树编码表进行解码
-*@param huffCodes
-*@param b
-*@return
-*/
-private static byte[] decode(Map&lt;Byte,String&gt; huffCodes,byte[] bytes){
-  StringBuilder sb = new StringBuilder();
-  //把byte数组转为一个二进制的字符串
-  for(int i = 0;i&lt;bytes.length;i++&gt;){
-      byte b = bytes[i];
-      //是否是最后一个
-      boolean flag = (i==bytes.length-1);
-      sb.append(byteToBitStr(!flag,b));
-  }
-  //把字符串按照指定的赫夫曼编码进行解码
-  //把赫夫曼编码的键值对进行交换
-  Map&lt;String, Byte&gt; map = new HashMap&lt;&gt;();
-  for(Map.Entry&lt;Byte,String&gt; entry:huffCodes.entrySet()){
-      map.put(entry.getValue(),entry.getKey());
-  }
-  //创建一个集合，用于存byte
-  List&lt;Byte&gt; list = new ArrayList&lt;&gt;();
-  //处理字符串
-  for(int i=0;i&lt;sb.length();){
-      int count = 1;
-      boolean flag = true;
-      Byte b = null;
-      //截取出一个byte
-      while(flag){
-            String key = sb.substring(i,i+count);
-            b = map.get(key);
-            if(b==null){
-                count++;
-            }else{
-              flag=false;
-            }
-      }
-      list.add(b);
-      i+=count;
-  }
-  //把集合转为数组
-  byte[] b = new byte[list.size()];
-  for(int i=0;i&lt;b.length;i++){
-      b[i]=list.get(i);
-  }
-  return b;
-}
-
-//将int转化为二进制8位表示
-private static String byteToBitStr(boolean flag,byte b){
-  int temp = b;
-  if(flag){o
-      temp|=256;
-  }
-  String str = Integer.toBinaryString(temp);
-  if(flag){
-      return str.substring(str.length()-8);
-  }else{
-    return str;
-  }
-}
-
-
-/**
-*进行赫夫曼树编码压缩的方法
-*@param bytes
-*@return
-*/
-private static byte[] huffmanZip(byte[] bytes){
-    //先统计每一个byte出现的次数，并放入一个集合中
-    List&lt;Node&gt; nodes = getNodes(bytes);
-    //创建一颗赫夫曼树
-    Node tree = createHuffmanTree(nodes);
-    //创建一个赫夫曼树编码表
-    Map&lt;Byte,String&gt; huffCodes = getCodes(tree);
-    //编码
-    byte[] b = zip(bytes.huffCodes);
-    return b;
-}
-
-/**
-*进行赫夫曼编码
-*@param tree
-*@return
-*/
-private static byte[] zip(byte[] bytes, Map&lt;Byte,String&gt; huffCodes){
-  StringBuilder sb = new StringBuilder();
-  //需要压缩的byte数组处理成一个二进制的字符串
-  for(byte b:bytes){
-        sb.append(huffCodes.get(b));
-  }
-  //定义长度
-  int len;
-  if(sb.length()%8==0){
-      len = sb.length()/8;
-  }else{
-      len = sb.length()/8+1;
-  }
-  //用于存储压缩后的byte
-  byte[] by = new byte[len];
-  //记录新的byte的位置
-  int index = 0;
-  for(int i=0;i&lt;sb.length();i+=8&gt;){
-      String strByte;
-      if(i+8&gt;sb.length()){
-        strByte = sb.substring(i);
-      }else{
-        strByte = sb.substring(i,i+8);
-      }
-      byte byt = (byte)Integer.parseInt(strByte,2);
-      by[index] = byt;
-      index++;
-  }
-  return by;
-}
-
-
-//用于临时存储路径
-static StringBuilder sb = new StringBuilder();
-//用于存储赫夫曼编码
-static Map&lt;Byte, String&gt; huffCodes = new HashMap&lt;&gt;();
-/**
-*根据赫夫曼树获取赫夫曼树编码
-*@param tree
-*@return
-*/
-private static Map&lt;Byte,String&gt; getCodes(Node tree){
-  if(tree==null){
-    return null;
-  }
-  getCodes(tree.left,&quot;0&quot;,sb);
-  getCodes(tree.right,&quot;1&quot;,sb);
-  return huffCodes;
-}
-
-private static void getCodes(Node node, String code, StringBuilder sb){
-  StringBuilder sb2 = new StringBuilder(sb);
-  sb2.append(code);
-  if(node.data==null){
-      getCodes(node.left,&quot;0&quot;,sb2);
-      getCodes(node.right,&quot;1&quot;,sb2);
-  }else{
-      huffCodes.put(node.data,sb2.toString());
-  }
-}
-/**
-*创建赫夫曼树
-*@param nodes
-*@return
-*/
-private static Node createHuffmanTree(List&lt;Node&gt; nodes){
-  while(nodes.size()&gt;1){
-      //先排序
-      //排序
-        Collections.sort(nodes);
-        //取出来权值最小的两个二叉树
-        Node left = nodes.get(nodes.size()-1);
-        Node right = nodes.get(nodes.size()-2);
-        //创建一颗新的二叉树
-        Node parent = new Node(null,left.weight+right.weight);
-        //把之前取出来的两颗二叉树设置为新创建的二叉树的子树
-        parent.left = left;
-        parent.right = right;
-        //把取出来的两个二叉树移除
-        nodes.remove(left);
-        nodes.remove(right);
-        //把新创建的二叉树放入集合中
-        nodes.add(parent);
-  }
-  return nodes.get(0);
-}
-
-/**
-*把byte数组转为node集合
-*@param bytes
-*@return
-*/
-private static List&lt;Node&gt; getNodes(byte[] bytes){
-    List&lt;Node&gt; nodes = new ArraysList&lt;&gt;();
-    //存储每一个byte出现了多少次
-    Map&lt;Byte,Integer&gt; counts = new Hash&lt;&gt;();
-    //统计每一个byte出现的次数
-    for(byte b:bytes){
-      Integer count = counts.get(b);
-      if(count==null){
-          counts.put(b,1);
-      }else{
-        counts.put(b,count+1);
-      }
-    }
-    //把每一个键值对转为一个node对象
-    for(Map.Entry&lt;Byte, Integer&gt; entry:counts.entrySet()){
-          nodes.add(new Node(entry.getKey(),entry.getValue()));
-    }
-    return nodes;
-  }
-
-}
-</code></pre>
             </div>
             <hr/>
 
@@ -803,7 +529,7 @@ private static List&lt;Node&gt; getNodes(byte[] bytes){
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiaowogui.top/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0(%E4%BA%94)47433.html">https://xiaowogui.top/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0(%E4%BA%94)47433.html</a>
+                    <a href="https://xiaowogui.top/%E5%88%9D%E8%AF%86Springundefined.html">https://xiaowogui.top/%E5%88%9D%E8%AF%86Springundefined.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -840,11 +566,7 @@ private static List&lt;Node&gt; getNodes(byte[] bytes){
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/">
-                                    <span class="chip bg-color">赫夫曼树</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1271,9 +993,54 @@ private static List&lt;Node&gt; getNodes(byte[] bytes){
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/%E5%88%9D%E8%AF%86Springundefined.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="初识Spring">
+                        
+                        <span class="card-title">初识Spring</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            title: 初始Springdate: ‘2020-05-30 15:30;00’author: 小蜗龟top: truecategories:
+
+JAVA
+Springtags:
+Spring基础
+
+一、Spring是什么Spring是
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小蜗龟
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0(%E5%9B%9B)48925.html">
                     <div class="card-image">
@@ -1290,64 +1057,6 @@ private static List&lt;Node&gt; getNodes(byte[] bytes){
                             树结构树结构概述什么是树结构为什么使用树结构树的基本概念二叉树:什么是二叉树
 满二叉树：所有叶子节点都在最后一层，而且节点的总数为：2^n-1,n是树的高度。
 完全二叉树：所有叶子节点都在最后一层或倒数第二层，且最后一层的叶子节点在左边连续
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                    数据结构
-                                </a>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">二叉树结构</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0(%E4%BA%8C)47427.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JAVA数据结构与算法基础学习笔记(二)">
-                        
-                        <span class="card-title">JAVA数据结构与算法基础学习笔记(二)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            栈
-栈的定义栈是一种操作受限制的线性表，将允许进行插入、删除的一端称为栈顶，另一端称为栈底。
-栈的分类栈主要分为静态栈和动态栈，静态栈类似于数组，而动态栈类似于链表，但只能对链表的一端进行操作。这里主要说一下静态栈。
-静态栈的表示
-
-#de
                         
                     </div>
                     <div class="publish-info">
@@ -1373,8 +1082,8 @@ private static List&lt;Node&gt; getNodes(byte[] bytes){
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E3%80%81%E9%93%BE%E8%A1%A8/">
-                        <span class="chip bg-color">栈、队列、链表</span>
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">二叉树结构</span>
                     </a>
                     
                 </div>
